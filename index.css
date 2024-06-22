@@ -80,20 +80,20 @@ button:active {
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 32px;
+        font-size: 32px; /* Increased size */
     }
 
     #message-el {
-        font-size: 16px;
+        font-size: 22px; /* Increased size */
     }
 
     button {
-        width: 140px;
-        font-size: 14px;
-        padding: 5px;
+        width: 180px; /* Increased width */
+        font-size: 20px; /* Increased font size */
+        padding: 10px; /* Increased padding */
     }
 
     body {
-        padding: 10px;
+        padding: 20px; /* Increased padding */
     }
 }
