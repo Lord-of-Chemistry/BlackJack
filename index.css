@@ -1,73 +1,42 @@
-@font-face {
-    font-family: 'CursedTimerUlil';
-    src: url('CursedTimerUlil-Aznm.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     background-image: url("table.jpeg");
     background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    font-weight: bold;
     color: white;
     text-align: center;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.container {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
+    font-size: 48px; /* Increased size */
     color: goldenrod;
-    font-size: 48px;
     margin: 20px 0;
 }
 
 #message-el {
-    font-size: 24px;
+    font-size: 24px; /* Increased size */
     font-style: italic;
     margin-bottom: 20px;
 }
 
 button {
     color: #016f32;
-    width: 200px;
+    width: 200px; /* Increased width */
     background: goldenrod;
-    padding: 10px;
-    font-size: 20px;
+    padding: 10px; /* Increased padding */
+    font-size: 20px; /* Increased font size */
     font-weight: bold;
     border: none;
-    border-radius: 5px;
-    margin: 5px 0;
+    border-radius: 5px; /* Increased border radius */
+    margin: 5px 0; /* Adjusted margin */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #d4af37;
+    background-color: #d4af37; /* Lighter shade of goldenrod for hover */
     transform: translateY(-2px);
 }
 
@@ -76,6 +45,7 @@ button:active {
     transform: translateY(0);
 }
 
+/* Media Queries for Responsiveness */
 @media screen and (max-width: 1200px) {
     h1 {
         font-size: 42px;
@@ -114,13 +84,13 @@ button:active {
     }
 
     #message-el {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     button {
         width: 140px;
-        font-size: 18px;
-        padding: 8px;
+        font-size: 14px;
+        padding: 5px;
     }
 
     body {
