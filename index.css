@@ -1,42 +1,72 @@
+@font-face {
+    font-family: 'CursedTimerUlil';
+    src: url('CursedTimerUlil-Aznm.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     background-image: url("table.jpeg");
     background-size: cover;
-    font-weight: bold;
-    color: white;
-    text-align: center;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 48px; /* Increased size */
     color: goldenrod;
+    font-size: 48px;
     margin: 20px 0;
 }
 
 #message-el {
-    font-size: 24px; /* Increased size */
+    font-size: 24px;
     font-style: italic;
     margin-bottom: 20px;
 }
 
 button {
     color: #016f32;
-    width: 200px; /* Increased width */
+    width: 200px;
     background: goldenrod;
-    padding: 10px; /* Increased padding */
-    font-size: 20px; /* Increased font size */
+    padding: 10px;
+    font-size: 20px;
     font-weight: bold;
     border: none;
-    border-radius: 5px; /* Increased border radius */
-    margin: 5px 0; /* Adjusted margin */
+    border-radius: 5px;
+    margin: 5px 0;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #d4af37; /* Lighter shade of goldenrod for hover */
+    background-color: #d4af37;
     transform: translateY(-2px);
 }
 
@@ -45,7 +75,6 @@ button:active {
     transform: translateY(0);
 }
 
-/* Media Queries for Responsiveness */
 @media screen and (max-width: 1200px) {
     h1 {
         font-size: 42px;
@@ -80,20 +109,20 @@ button:active {
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 32px; /* Increased size */
+        font-size: 32px;
     }
 
     #message-el {
-        font-size: 22px; /* Increased size */
+        font-size: 22px;
     }
 
     button {
-        width: 180px; /* Increased width */
-        font-size: 20px; /* Increased font size */
-        padding: 10px; /* Increased padding */
+        width: 140px;
+        font-size: 18px;
+        padding: 8px;
     }
 
     body {
-        padding: 20px; /* Increased padding */
+        padding: 10px;
     }
 }
