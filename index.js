@@ -8,14 +8,22 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
 let player = {
-    name: "WittySage",
+    name: "",
     chips: 145
 }
 
 let playerEl = document.getElementById("player-el")
-playerEl.textContent = player.name + ": $" + player.chips
 
-// Function to get a random card
+function getPlayerName() {
+    let name = prompt("Please enter your name:")
+    if (name === null || name.trim() === "") {
+        player.name = "Player"
+    } else {
+        player.name = name
+    }
+    playerEl.textContent = player.name + ": $" + player.chips
+}
+
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
     if (randomNumber > 10) {
@@ -23,11 +31,14 @@ function getRandomCard() {
     } else if (randomNumber === 1) {
         return 11
     } else {
-        return randomNumber // 2-10
+        return randomNumber
     }
 }
 
 function startGame() {
+    if (player.name === "") {
+        getPlayerName()
+    }
     isAlive = true
     hasBlackJack = false
     let firstCard = getRandomCard()
@@ -63,4 +74,8 @@ function newCard() {
         cards.push(card)
         renderGame()        
     }
+}
+
+window.onload = function() {
+    getPlayerName()
 }
