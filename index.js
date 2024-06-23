@@ -7,6 +7,15 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+let player = {
+    name: "WittySage",
+    chips: 145
+}
+
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
+
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
     if (randomNumber > 10) {
@@ -45,6 +54,7 @@ function renderGame() {
     }
     messageEl.textContent = message
 }
+
 
 function newCard() {
     if (isAlive === true && hasBlackJack === false) {
